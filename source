@@ -1,0 +1,19 @@
+	<script type="text/javascript">
+		
+	function getRandomInt(min,max){
+		return Math.floor(Math.random()*(max - min +1))+min;
+	}
+		let output = document.getElementById('diceOutput');
+		let dice = [4, 6, 8, 10, 12, 20, 100];
+		dice.map((dieNum =>{
+			let button = document.createElement("button");
+			button.innerHTML = "Roll a d"+dieNum;
+			diceButtonBox.appendChild(button);
+			button.addEventListener('click', () =>{
+				let roll = getRandomInt(1, dieNum);
+				output.innerHTML += "You rolled " + roll + " on a d"+dieNum+".</br>";
+			});
+		}));
+		
+
+			</script>
